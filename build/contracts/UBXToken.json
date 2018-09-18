@@ -2,26 +2,40 @@
   "contractName": "UBXToken",
   "abi": [
     {
+      "constant": true,
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "inputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820dd40933b033ea239b41de5087b68823ca7d565a4ed2ef010b830dae9b5ec6f190029",
-  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820dd40933b033ea239b41de5087b68823ca7d565a4ed2ef010b830dae9b5ec6f190029",
-  "sourceMap": "25:147:0:-;;;135:35;8:9:-1;5:2;;;30:1;27;20:12;5:2;135:35:0;25:147;;;;;;",
-  "deployedSourceMap": "25:147:0:-;;;;;",
-  "source": "pragma solidity ^0.4.24;\ncontract UBXToken{\n    // Constructor\n    //set number of total tokens\n    // read total number of tokens\n    function UBXToken() public {\n\n    }\n}",
+  "bytecode": "0x608060405234801561001057600080fd5b506303f94daf600081905550609e8061002a6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806318160ddd146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820b2301703c3db95e1450cf7a1eb722552088a191be3edd4a87cd8198c727726a90029",
+  "deployedBytecode": "0x608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806318160ddd146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820b2301703c3db95e1450cf7a1eb722552088a191be3edd4a87cd8198c727726a90029",
+  "sourceMap": "24:217:0:-;;;171:68;8:9:-1;5:2;;;30:1;27;20:12;5:2;171:68:0;223:8;209:11;:22;;;;24:217;;;;;;",
+  "deployedSourceMap": "24:217:0:-;;;;;;;;;;;;;;;;;;;;;;;;134:26;;8:9:-1;5:2;;;30:1;27;20:12;5:2;134:26:0;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.2;\ncontract UBXToken{\n    // Constructor\n    //set number of total tokens\n    // read total number of tokens\n    uint256 public totalSupply;\n    \n    function UBXToken () public {\n        totalSupply = 66669999;\n\n    }\n}",
   "sourcePath": "/home/nethos/Subject/Learning project/token_sale/contracts/UBXToken.sol",
   "ast": {
     "absolutePath": "/home/nethos/Subject/Learning project/token_sale/contracts/UBXToken.sol",
     "exportedSymbols": {
       "UBXToken": [
-        6
+        12
       ]
     },
-    "id": 7,
+    "id": 13,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -30,10 +44,10 @@
           "solidity",
           "^",
           "0.4",
-          ".24"
+          ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:0"
+        "src": "0:23:0"
       },
       {
         "baseContracts": [],
@@ -41,22 +55,100 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6,
+        "id": 12,
         "linearizedBaseContracts": [
-          6
+          12
         ],
         "name": "UBXToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 3,
+            "name": "totalSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 12,
+            "src": "134:26:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "134:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 4,
+              "id": 10,
               "nodeType": "Block",
-              "src": "162:8:0",
-              "statements": []
+              "src": "199:40:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "209:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "3636363639393939",
+                      "id": 7,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "223:8:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_66669999_by_1",
+                        "typeString": "int_const 66669999"
+                      },
+                      "value": "66669999"
+                    },
+                    "src": "209:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 9,
+                  "nodeType": "ExpressionStatement",
+                  "src": "209:22:0"
+                }
+              ]
             },
             "documentation": null,
-            "id": 5,
+            "id": 11,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -64,39 +156,39 @@
             "name": "UBXToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2,
+              "id": 4,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "152:2:0"
+              "src": "189:2:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3,
+              "id": 5,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "162:0:0"
+              "src": "199:0:0"
             },
-            "scope": 6,
-            "src": "135:35:0",
+            "scope": 12,
+            "src": "171:68:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7,
-        "src": "25:147:0"
+        "scope": 13,
+        "src": "24:217:0"
       }
     ],
-    "src": "0:172:0"
+    "src": "0:241:0"
   },
   "legacyAST": {
     "absolutePath": "/home/nethos/Subject/Learning project/token_sale/contracts/UBXToken.sol",
     "exportedSymbols": {
       "UBXToken": [
-        6
+        12
       ]
     },
-    "id": 7,
+    "id": 13,
     "nodeType": "SourceUnit",
     "nodes": [
       {
@@ -105,10 +197,10 @@
           "solidity",
           "^",
           "0.4",
-          ".24"
+          ".2"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:24:0"
+        "src": "0:23:0"
       },
       {
         "baseContracts": [],
@@ -116,22 +208,100 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 6,
+        "id": 12,
         "linearizedBaseContracts": [
-          6
+          12
         ],
         "name": "UBXToken",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
+            "constant": false,
+            "id": 3,
+            "name": "totalSupply",
+            "nodeType": "VariableDeclaration",
+            "scope": 12,
+            "src": "134:26:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "134:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
             "body": {
-              "id": 4,
+              "id": 10,
               "nodeType": "Block",
-              "src": "162:8:0",
-              "statements": []
+              "src": "199:40:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 8,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 6,
+                      "name": "totalSupply",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 3,
+                      "src": "209:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "3636363639393939",
+                      "id": 7,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "223:8:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_66669999_by_1",
+                        "typeString": "int_const 66669999"
+                      },
+                      "value": "66669999"
+                    },
+                    "src": "209:22:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 9,
+                  "nodeType": "ExpressionStatement",
+                  "src": "209:22:0"
+                }
+              ]
             },
             "documentation": null,
-            "id": 5,
+            "id": 11,
             "implemented": true,
             "isConstructor": true,
             "isDeclaredConst": false,
@@ -139,30 +309,30 @@
             "name": "UBXToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 2,
+              "id": 4,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "152:2:0"
+              "src": "189:2:0"
             },
             "payable": false,
             "returnParameters": {
-              "id": 3,
+              "id": 5,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "162:0:0"
+              "src": "199:0:0"
             },
-            "scope": 6,
-            "src": "135:35:0",
+            "scope": 12,
+            "src": "171:68:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
-        "scope": 7,
-        "src": "25:147:0"
+        "scope": 13,
+        "src": "24:217:0"
       }
     ],
-    "src": "0:172:0"
+    "src": "0:241:0"
   },
   "compiler": {
     "name": "solc",
@@ -179,9 +349,9 @@
       "events": {},
       "links": {},
       "address": "0xc186ea4637f5ecdf8ac42dc88df5e2676b0b894e",
-      "transactionHash": "0x0cd50292f931e59db03717feb1a69ba6edb18544efb741e398e2427a13437026"
+      "transactionHash": "0xc5f01fbb20100af0e21320fa38df45e14c8a12d798c6a8e06434dc6167c553fd"
     }
   },
   "schemaVersion": "2.0.1",
-  "updatedAt": "2018-09-18T00:17:47.006Z"
+  "updatedAt": "2018-09-18T14:40:28.931Z"
 }

@@ -1,9 +1,12 @@
-pragma solidity ^0.4.24;
+pragma solidity ^0.4.2;
 contract UBXToken{
     // Constructor
     //set number of total tokens
     // read total number of tokens
-    function UBXToken() public {
+    uint256 public totalSupply;
+    
+    function UBXToken () public {
+        totalSupply = 66669999;
 
     }
 }
