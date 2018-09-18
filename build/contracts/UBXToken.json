@@ -1,0 +1,187 @@
+{
+  "contractName": "UBXToken",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820dd40933b033ea239b41de5087b68823ca7d565a4ed2ef010b830dae9b5ec6f190029",
+  "deployedBytecode": "0x6080604052600080fd00a165627a7a72305820dd40933b033ea239b41de5087b68823ca7d565a4ed2ef010b830dae9b5ec6f190029",
+  "sourceMap": "25:147:0:-;;;135:35;8:9:-1;5:2;;;30:1;27;20:12;5:2;135:35:0;25:147;;;;;;",
+  "deployedSourceMap": "25:147:0:-;;;;;",
+  "source": "pragma solidity ^0.4.24;\ncontract UBXToken{\n    // Constructor\n    //set number of total tokens\n    // read total number of tokens\n    function UBXToken() public {\n\n    }\n}",
+  "sourcePath": "/home/nethos/Subject/Learning project/token_sale/contracts/UBXToken.sol",
+  "ast": {
+    "absolutePath": "/home/nethos/Subject/Learning project/token_sale/contracts/UBXToken.sol",
+    "exportedSymbols": {
+      "UBXToken": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "UBXToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "162:8:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "UBXToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:0:0"
+            },
+            "scope": 6,
+            "src": "135:35:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "25:147:0"
+      }
+    ],
+    "src": "0:172:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/nethos/Subject/Learning project/token_sale/contracts/UBXToken.sol",
+    "exportedSymbols": {
+      "UBXToken": [
+        6
+      ]
+    },
+    "id": 7,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".24"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 6,
+        "linearizedBaseContracts": [
+          6
+        ],
+        "name": "UBXToken",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 4,
+              "nodeType": "Block",
+              "src": "162:8:0",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 5,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "UBXToken",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:2:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 3,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "162:0:0"
+            },
+            "scope": 6,
+            "src": "135:35:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 7,
+        "src": "25:147:0"
+      }
+    ],
+    "src": "0:172:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
+  "networks": {
+    "4447": {
+      "events": {},
+      "links": {},
+      "address": "0x345ca3e014aaf5dca488057592ee47305d9b3e10",
+      "transactionHash": "0x0cd50292f931e59db03717feb1a69ba6edb18544efb741e398e2427a13437026"
+    },
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xc186ea4637f5ecdf8ac42dc88df5e2676b0b894e",
+      "transactionHash": "0x0cd50292f931e59db03717feb1a69ba6edb18544efb741e398e2427a13437026"
+    }
+  },
+  "schemaVersion": "2.0.1",
+  "updatedAt": "2018-09-18T00:17:47.006Z"
+}
