@@ -1,25 +1,57 @@
 var UBXToken = artifacts.require("./UBXToken.sol"); //chuyen sang nodejs
+//calling function from a different contract
 contract('UBXToken',function(accounts){
-    it('sets the total supply upon deployment',function(){
+  var tokenInstance;
+    it('initializes the contract with the correct values',function(){
+      return UBXToken.deployed().then(function(instance){
+        tokenInstance=instance;
+        return tokenInstance.name(); 
+      }).then(function(name){
+        assert.equal(name,'UBX Token','has the exact name');
+        return tokenInstance.symbol();
+      }).then(function(symbol){
+        assert.equal(symbol,'UBX','has the exact symbol')
+        return tokenInstance.standard();
+      }).then(function(standard){
+        assert.equal(standard,'UBX Token v1.0','has the correct standard');
+      });
+    });
+    it('allocates initial supply upon deployment',function(){
         return UBXToken.deployed().then(function(instance){ //promise dai dien cho ket qua asynctask
             tokenInstance = instance;
             return tokenInstance.totalSupply();
         }).then(function(totalSupply){
             assert.equal(totalSupply.toNumber(),66669999,'set the total supply to 66669999');
-        });
+            return tokenInstance.balanceOf(accounts[0]);
+          }).then(function(adminBalance){
+            assert.equal(adminBalance.toNumber(),66669999,'it allocates the initial supply to admin account')
+          });
+    });
+    it('transfers token ownership',function(){
+      return UBXToken.deployed().then(function(instance){
+        tokenInstance=instance;
+        //test require statement first by transferring something larger than the sender balance
+        //call would return true or false value
+        return tokenInstance.transfer.call(accounts[1],9999999999999999);
+      }).then(assert.fail).catch(function(error){
+        assert(error.message.indexOf('revert')>=0,'error message must contain revert');
+        return tokenInstance.transfer.call(accounts[1],300000,{from: accounts[0]});
+      }).then(function(success){
+        assert.equal(success,true,'it returns true'); 
+        return tokenInstance.transfer(accounts[1],300000,{from:accounts[0]});
+      }).then(function(receipt){
+        assert.equal(receipt.logs.length,1,'triggers one event');
+        assert.equal(receipt.logs[0].event,'Transfer','should be the "Transfer" event');
+        assert.equal(receipt.logs[0].args._from,accounts[0],'logs the account the token are transferred from');
+        assert.equal(receipt.logs[0].args._to,accounts[1],'logs the account the tokens are transferred to');
+        assert.equal(receipt.logs[0].args._value,300000,'logs the transfer amount');
+        return tokenInstance.balanceOf(accounts[1]);
+
+      }).then(function(balance){
+        assert.equal(balance.toNumber(),300000,'adds the amount to receiving account');
+        return tokenInstance.balanceOf(accounts[0]);
+      }).then(function(balance){
+        assert.equal(balance.toNumber(),66369999,'deducts the amount from sending account');
+      });
     });
 })
-/* var UBXToken = artifacts.require("./UBXToken.sol");
-
-contract('UBXToken', function(accounts) {
-
-  it('sets the total supply upon deployment', function() {
-    return UBXToken.deployed().then(function(instance) {
-      tokenInstance = instance;
-      return tokenInstance.totalSupply();
-    }).then(function(totalSupply) {
-      assert.equal(totalSupply.toNumber(), 66669999, 'sets the total supply to 1,000,000');
-    });
-  });
-}) */
-
